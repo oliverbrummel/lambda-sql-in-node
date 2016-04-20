@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html ng-app="app">
-  <head>
-    <meta charset="utf-8">
-    <title>Angular + Express + SQL</title>
-    <script src="vendor/angular/angular.min.js"></script>
-    <script src="scripts/client.min.js"></script>
-    </head>
-  <body>
-    <div ng-controller="PersonController as person">
-      <label>Name:</label>
-      <input type="text" ng-model="person.name" />
+<head>
+  <meta charset="utf-8">
+  <title>Angular + Express + SQL</title>
+  <script src="vendor/angular/angular.min.js"></script>
+  <script src="scripts/client.min.js"></script>
+</head>
+<body ng-controller="PersonController as person">
+  <div class = "form">
 
-      <label>Address:</label>
-      <input type="text" ng-model="person.address" />
+    <label>Name:</label>
+    <input type="text" ng-model="person.name" />
 
-      <button ng-click="person.sendData()">Submit</button>
-    </div>
-  </body>
+    <label>Address:</label>
+    <input type="text" ng-model="person.address" />
+
+    <label>City:</label>
+    <input type="text" ng-model="person.city" />
+
+    <label>State:</label>
+    <input type="text" ng-model="person.state" />
+
+    <label>Zip Code:</label>
+    <input type="text" ng-model="person.zip_code" />
+
+    <button ng-click="person.sendData()">Submit</button>
+  </div>
+  <div class="results">
+    <ul ng-repeat="item in person.result">
+      <li>{{item.name}}</li>
+      <li>{{item.address}}</li>
+      <li>{{item.city}}</li>
+      <li>{{item.state}}</li>
+      <li>{{item.zip_code}}</li>
+    </ul>
+  </div>
+
+</body>
 </html>
