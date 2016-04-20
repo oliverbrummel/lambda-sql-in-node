@@ -5,6 +5,9 @@
   <title>Angular + Express + SQL</title>
   <script src="vendor/angular/angular.min.js"></script>
   <script src="scripts/client.min.js"></script>
+  <link rel = "stylesheet" href = "vendor/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel = "stylesheet" href = "styles.css" />
+
 </head>
 <body ng-controller="PersonController as person">
   <div class = "form">
@@ -28,11 +31,11 @@
   </div>
   <div class="results">
     <ul ng-repeat="item in person.result">
-      <li>{{item.name}}</li>
-      <li>{{item.address}}</li>
-      <li>{{item.city}}</li>
-      <li>{{item.state}}</li>
-      <li>{{item.zip_code}}</li>
+      <li>Name: {{item.name}}</li>
+      <li>Address: {{item.address}}</li>
+      <li>City: {{item.city}}</li>
+      <li>State: {{item.state}}</li>
+      <li>Zip Code: {{item.zip_code}}</li>
     </ul>
   </div>
 
